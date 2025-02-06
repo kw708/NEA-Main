@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="revisiontools.css">
 </head>
 <body>
+    <!--Holds all the items on the page giving them the same general style feature-->
     <div class="main-container">
         <div class="container">
             <nav>
@@ -26,7 +27,7 @@
                 </ul> </div>
         </div> 
         <!-- The timer-->
-        <div class="container2">
+     <!---   <div class="container2">
             <div class="timer-display">
                 00:00:00
             </div>
@@ -35,6 +36,26 @@
                 <button id="pause-timer">Pause</button>
                 <button id="reset-timer">Reset</button>
             </div>
+        </div>
+    </div>-->
+
+    <!--The Timer-->
+    <div class ="timer-container">
+        <h2>Set Pomodoro Timer </h2>
+        <div id = "pomodoro-timer">
+            <div id = "timer display">00:00:00</div>
+            <button id = "start-btn">Start</button>
+            <button id="pause-btn">Pause</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <!--Timer for days - down to exams-->
+        <label for ="countdown-date">Choose a time:</label>
+        <input type = "datetime-local" id = "countdown-date">
+        <button onclick = "startCountdown()">Start</button>
+        <div id = "countdown">
+            <span id = "hours"></span>
+            <span id = "minutes"></span>
+            <span id = "seconds"></span>
         </div>
     </div>
 

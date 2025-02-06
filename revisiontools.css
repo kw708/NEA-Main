@@ -6,7 +6,7 @@
     background-color:  rgba(203, 249, 246, 0.8); 
     
 
-    
+/*Icon styling for the to do list*/
 }
 nav img {
     display: block; 
@@ -18,7 +18,7 @@ nav img {
         width: 15%;
     }
 }
-
+/*centralises all the items in the page*/
 .main-container{
     display: flex;
     flex-direction: column;
@@ -141,7 +141,7 @@ ul li span:hover{
     box-sizing: border-box;
 }
 
-/*Timer*/
+/*Timer*
 .container2{
     background-color: rgba( 0, 150 ,255 ,1 ); 
     width: 40%;
@@ -201,4 +201,47 @@ ul li span:hover{
 
 .buttons button:hover{
     box-shadow: 0 20px rgba( 0, 0 ,0 ,0.25 );
+}*/
+
+
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#countdown  span{
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+input[type="number"]{
+    font-size: 16px;
+    padding: 8px;
+    margin: 10px 0;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+button {
+    background-color:lightblue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:aliceblue
+}
+#timer-display {
+    font-size: 10px;
+    margin-bottom: 10px;
+
+
 }
