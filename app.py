@@ -149,7 +149,7 @@ def dashboard():
 @app.route('/is_authenticated', methods=['GET'])
 def is_authenticated():
     return jsonify({
-        "authenticated": 'user_id' in session
+        "authenticated": "user_id" in session
     }), 200
 
 # Error Handlers
