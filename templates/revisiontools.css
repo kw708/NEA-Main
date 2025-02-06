@@ -141,6 +141,19 @@ ul li span:hover{
     box-sizing: border-box;
 }
 
+button1 {
+    background-color:lightblue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button1 :hover{
+    background-color:aliceblue
+}
 /*Timer*
 .container2{
     background-color: rgba( 0, 150 ,255 ,1 ); 
