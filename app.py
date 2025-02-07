@@ -20,6 +20,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Initialize app
 app = Flask(__name__)
+
+
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default')  # Replace 'default' with a strong secret key in production
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL_PROTOCOL', 'sqlite:///') + os.path.join(basedir, os.getenv('DATABASE_URL_FILE_NAME', 'users.db'))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
