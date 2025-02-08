@@ -43,20 +43,21 @@ function displayTimer(){
 let countdowntime;
 let x;
 
-function startTimer(){
-    const userInput = document.getElementById("time").value;
+function startTimer() {
+    const userInput = document.getElementById("time").value; // Corrected ID
 
     if (!userInput) {
-        alert("Please ennter a time");
+        alert("Please enter a time");
         return;
     }
-    countdowntime = new Date().getTime();
+
+    countdowntime = new Date().getTime() + (userInput * 60 * 1000);
+
     if (x) {
         clearInterval(x);
     }
-/*starts the timer and updates the webpage*/
-    x = setInterval(function(){
 
+    x = setInterval(function () {
         const now = new Date().getTime();
         const distance = countdowntime - now;
 
@@ -64,12 +65,10 @@ function startTimer(){
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
 
-        document.getElementById("hours").innerHTML = hours ;
-        document.getElementById("minutes").innerHTML = minutes ;
-        document.getElementById("seconds").innerHTML = seconds ;
-
-/*Checks that the timer ends and resets the timer*/
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("hours").innerHTML = "00";
@@ -78,6 +77,8 @@ function startTimer(){
         }
     }, 1000);
 }
+
+
 /*actual pomodoro timer*/
 const timerDisplay = document.getElementById('timer-display');
 const startBtn = document.getElementById('start-btn');
