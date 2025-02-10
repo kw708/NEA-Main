@@ -57,27 +57,29 @@
        </section>
        <!--Javascript for Toggle Menu-->
     <script>
-        //Function to show the menu only on mobile
-        function toggleMenu() {
-            const navLinks = document.getElementById("navLinks");
-            const isMobile = window.innerWidth <= 700;
+        // Function to show the menu only on mobile
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const isMobile = window.innerWidth <= 700;
+
+    if (isMobile) {
+        navLinks.style.right = navLinks.style.right === "0px" ? "-200px" : "0";
+    }
+}
+
+// Function to hide the menu
+function hideMenu() {
+    document.getElementById("navLinks").style.right = "-200px";
+}
+
+// Update menu display if screen resizes
+window.addEventListener("resize", () => {
+    const navLinks = document.getElementById("navLinks");
+    if (window.innerWidth > 700) {
+        navLinks.style.right = "-200px"; // Ensure it's hidden on larger screens
+    }
+});
         
-            if (isMobile) {
-                navLinks.style.right = navLinks.style.right === "0px" ? "-200px" : "0";
-            }
-        }
-       // Function to hide the menu
-       function hideMenu() {
-           document.getElementById("navLinks").style.right = "-200px";
-       }
-       
-       // Update menu display if screen resizes
-       window.addEventListener("resize", () => {
-           const navLinks = document.getElementById("navLinks");
-           if (window.innerWidth > 700) {
-               navLinks.style.right = "-200px"; // Ensure it's hidden on larger screens
-           }
-       });
        </script>
     </body>
     </html>
